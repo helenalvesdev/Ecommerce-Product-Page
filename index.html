@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <div class="box">
+      <img class="js-box__menu" alt="" onclick="showMenu()" src="images/icon-menu.svg">
+      
+      <a href="#6"><img class="box__logo" alt="" src="images/logo.svg"></a>
+
+      <nav class="js-nav">
+        <div class="group">
+          <img class="group__close" alt="" src="images/icon-close.svg">
+      
+          <ul class="group__links">
+            <a href="#1"><li>Collections</li></a>
+            <a href="#2"><li>Men</li></a>
+            <a href="#3"><li>Women</li></a>
+            <a href="#4"><li>About</li></a>
+            <a href="#5"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav> 
+    </div>
+
+
+    <div class="box-right">
+      <svg class="box-right__cart" onclick="showCart()" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path class="js-box-right__cart__path" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#000000" fill-rule="nonzero"/>
+      </svg>
+
+      <p class="js-box-right__cart-number" onclick="showCart()"></p>
+    
+      <a href="#7" target="_blank"><img class="box-right__avatar" alt="" src="images/image-avatar.png"></a>
+    </div>
+    <hr>
+  </header>
+
+  <main class="product">
+    <div class="js-lightbox">
+      <div class="lightbox__img">
+        <!--button close-->
+        <svg class="js-lightbox__img__svg" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+          <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/>
+        </svg>
+
+        <!--flexbox img-->
+        <div class="lightbox__img__kit">
+          <img class="js-lightbox__img__kit-main" alt="White and light brown tennis." src="images/image-product-1.jpg">
+
+          <!--flexbox icons-->
+          <div class="js-lightbox__img__kit-icons">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+            </svg>
+
+            <svg onclick="ltbxNext()" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="lightbox__img_group">
+          <img class="lightbox__img_group-next" alt="" onclick="changeLtbx(this)" src="images/image-product-1.jpg">
+
+          <img class="lightbox__img_group-next" alt="" onclick="changeLtbx(this)" src="images/image-product-2.jpg">
+
+          <img class="lightbox__img_group-next" alt="" onclick="changeLtbx(this)" src="images/image-product-3.jpg">
+
+          <img class="lightbox__img_group-next" alt="" onclick="changeLtbx(this)" src="images/image-product-4.jpg">
+        </div>
+      </div>
+    </div>
+    
+    <div class="js-product__cart">
+      <h6>Cart</h6>
+      <hr>
+
+      <div class="product__cart-info">
+        <!--img class="js-product-img" product thumbnail-->
+        <!--ul class="js-product__cart-info__items"-->
+        <!--img class="js-delete" delete-->
+      </div>
+
+      <button class="product__cart-button" type="button">Checkout</button>
+    </div>
+
+    <div class="product__img"><!-- ponto de melhoria -->
+      <img class="js-product__img-img desktop-main"  alt="White and light brown tennis." src="images/image-product-1.jpg">
+
+      <img class="desktop" alt="" onclick="changeImg(this)" src="images/image-product-1.jpg">
+      <img class="desktop" alt="" onclick="changeImg(this)" src="images/image-product-2.jpg">
+      <img class="desktop" alt="" onclick="changeImg(this)" src="images/image-product-3.jpg">
+      <img class="desktop" alt="" onclick="changeImg(this)" src="images/image-product-4.jpg">
+
+      <div class="js-product__img-icons">
+        <img alt="" src="images/icon-previous.svg">
+        <img onclick="nextImg()" alt="" src="images/icon-next.svg">
+      </div>
+    </div>
+
+    <div class="product__info">
+      <div class="product__info-about">
+        <h6>Sneaker Company</h6>
+        <h2>Fall Limited Edition Sneakers<h2>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div>
+
+      <ul class="product__info-price">
+        <li>
+          <ul class="product__info-price__promo">
+            <li>$125.00</li>
+            <li>50%</li>
+          </ul>
+        </li>
+        <li>$250.00</li>
+      </ul>
+
+      <div class="product__info-amount">
+        <img onclick="decreaseAmount()" alt="" src="images/icon-minus.svg">
+        <p class="js-product__info-amount-n"></p>
+        <img onclick="increaseAmount()" alt="" src="images/icon-plus.svg">
+      </div>
+
+      <div onclick="addCart()" class="product__info__add-cart">
+        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/>
+        </svg>
+        <p>Add to cart</p>
+      </div>
+    </div>
+
+    <footer class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6" target="_blank">Frontend Mentor</a></p>
+      <p>Coded by <a href="https://github.com/helenalvesdev" target="_blank">Helen Alves</a></p>
+    </footer>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
