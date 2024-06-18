@@ -41,5 +41,5 @@ Users should be able to:
 
 <h3 id="author">Author</h3>
 
-- [LinkedIn](www.linkedin.com/in/devhelenalves)
+- [LinkedIn](https://www.linkedin.com/in/devhelenalves)
 - [Frontend Mentor](https://www.frontendmentor.io/profile/helenalvesdev)
